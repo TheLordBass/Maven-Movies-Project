@@ -20,11 +20,6 @@ on city.country_id = country.country_id;
 
 
 
-
-
-
-
-
 	
 /*
 2.	I would like to get a better understanding of all of the inventory that would come along with the business. 
@@ -43,19 +38,6 @@ left join film
 on inventory.film_id = film.film_id;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 
 3.	From the same list of films you just pulled, please roll that data up and provide a summary level overview 
 of your inventory. We would like to know how many inventory items you have with each rating at each store. 
@@ -68,17 +50,6 @@ from inventory
 left join film
 on inventory.film_id = film.film_id
 group by film.rating, inventory.store_id;
-
-
-
-
-
-
-
-
-
-
-
 
 /* 
 4. Similarly, we want to understand how diversified the inventory is in terms of replacement cost. We want to 
@@ -101,15 +72,6 @@ left join category
 on film_category.category_id = category.category_id
 group by store_id, category.name
 order by store_id asc; 
-
-
-
-
-
-
-
-
-
 
 
 /*
@@ -163,16 +125,6 @@ group by customer.first_name, customer.last_name
 order by sum(payment.amount) desc;
 
 
-
-
-
-
-
-
-
-
-
-
     
 /*
 7. My partner and I would like to get to know your board of advisors and any current investors.
@@ -193,13 +145,6 @@ select
 investor.first_name as 'First Name',
 investor.last_name as 'Last Name'
 from investor;
-
-
-
-
-
-
-
 
 
 
